@@ -1,0 +1,30 @@
+/* KEYFRAMES */
+
+@keyframes slidein {
+    from { opacity: 0%; }
+    to { opacity: 100%; }
+}
+
+@keyframes borderloop {
+    from {
+        transform: scale(1);
+    }
+    to { 
+        background-color: #21b36a94; 
+        transform: scale(1.02);
+    }
+}
+
+@keyframes initialfx__header {
+    from { opacity: 0%;  transform: translate(0, -50%); }
+    to { opacity: 100%; transform: translate(0); }
+}
+
+@keyframes initialfx__footer {
+    from { opacity: 0%;  transform: translate(0, 50%); }
+    to { opacity: 100%; transform: translate(0); }
+}
+
+.initialfx__header { animation: initialfx__header 1s 1; }
+
+.initialfx__footer {animation: initialfx__footer 1s 1; }

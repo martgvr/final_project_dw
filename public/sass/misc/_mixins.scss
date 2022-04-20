@@ -1,0 +1,30 @@
+/* HELPERS */
+
+.flex-row { display: flex; flex-direction: row; }
+.flex-column { display: flex; flex-direction: column; }
+.container { 
+    min-width: 100vw;
+    padding: 0 20vw; 
+    margin: 0 auto;
+}
+.grid { display: grid; }
+
+@mixin playAnimation($animationName, $animationTime) {
+    animation-name: $animationName;
+    animation-duration: $animationTime;
+}
+
+@mixin bgImage($imgUrl, $imgPosition, $imgRepeat, $imgSize) {
+    background-image: url($imgUrl);
+    background-position: $imgPosition;
+    background-repeat: $imgRepeat;
+    background-size: $imgSize;
+}
+
+@mixin flex($direction:row, $justify: flex-start, $align: flex-start, $wrap: nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+}

@@ -1,0 +1,20 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+// MISC
+@import './misc/variables';
+@import './misc/mixins';
+@import './misc/normalize';
+@import './misc/animations';
+
+// PARTIALS
+@import './partials/header';
+@import './partials/footer';
+
+// PAGES
+@import './pages/index';
+@import './pages/productos';
+@import './pages/nosotros';
+@import './pages/testimonios';
+@import './pages/contacto';

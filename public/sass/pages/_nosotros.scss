@@ -1,0 +1,88 @@
+/* NOSOTROS */
+
+.about__container {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:    "about__title about__mision about__vision"
+                            "about__picture1 about__text1 about__text1"
+                            "about__text2 about__text2 about__picture2";
+    color: #000000;
+    font-size: map-get($text-size, sm);
+    backdrop-filter: blur(3px);
+    background-color: #75757586;
+}
+
+.about__title {
+    grid-area: about__title;
+    background-color: rgba(0, 0, 0, 0.815);
+    color: $secondary-color;
+    text-transform: uppercase;
+    @include playAnimation(slidein, 1s);
+}
+
+.about__mision {
+    @include playAnimation(slidein, 1.5s);
+    background-color: rgba(51, 49, 49, 0.562);
+    color: $secondary-color;
+    grid-area: about__mision;
+}
+
+.about__vision {
+    @include playAnimation(slidein, 1.5s);
+    background-color: rgba(51, 49, 49, 0.562);
+    color: $secondary-color;
+    grid-area: about__vision;
+}
+
+.about__picture1 {
+    @include bgImage("../img/aboutpicture1.jpg",center center, no-repeat, cover);
+    @include playAnimation(slidein, 3s);
+    grid-area: about__picture1;
+}
+
+.about__text1 {
+    @include playAnimation(slidein, 2.6s);
+    background-color: rgba(255, 255, 255, 0.623);
+    grid-area: about__text1;
+}
+
+.about__text2 {
+    grid-area: about__text2;
+    background-color: rgba(0, 0, 0, 0.562);
+    color: $secondary-color;
+    @include playAnimation(slidein, 2.2s);
+}
+
+.about__picture2 {
+    grid-area: about__picture2;
+    @include bgImage("../img/aboutpicture2.jpg",center center, no-repeat, cover);
+    @include playAnimation(slidein, 7s);
+}
+
+.about__card {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    
+    h2 {
+        margin-bottom: 6px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .about__container {
+        grid-template-rows: 0.1fr 1fr 1fr 1fr 0.2fr 1fr 0.2fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:    "about__title" 
+                                "about__mision" 
+                                "about__vision"
+                                "about__picture1" 
+                                "about__text1"
+                                "about__picture2"
+                                "about__text2";
+    }
+    .about__mision {
+        background-color: rgba(27, 27, 27, 0.719);
+    }
+}
